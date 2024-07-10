@@ -1,0 +1,17 @@
+{
+  "name": "Sample",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "traQのDisplayNameを本名にする拡張機能",
+  "content_scripts": [
+    {
+      "matches": ["https://q.trap.jp/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["https://portal.trap.jp/"]
+}
